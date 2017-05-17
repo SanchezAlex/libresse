@@ -1,0 +1,358 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+img, fieldset, a img {
+  border: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+input[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+input, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+div, input, textarea, select, button,
+h1, h2, h3, h4, h5, h6, a, span, a:focus {
+  outline: none;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #fff;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 113px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.header__wrap {
+  padding-right: 534px;
+  padding-left: 291px;
+}
+
+.logo {
+  float: left;
+}
+
+.nav-menu {
+  float: right;
+}
+
+.nav-menu ul {
+  width: 100%;
+  padding-top: 58px;
+  padding-bottom: 45px;
+}
+
+.nav-menu ul li {
+  margin: 0 20px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.nav-menu ul li a {
+  color: #7248b1;
+  font-family: 'Circe', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav-menu ul li:nth-child(2) a {
+  font-weight: 400;
+}
+
+.intro {
+  width: 100%;
+  background-image: url("../img/bg-intro.jpg");
+  background-size: cover;
+}
+
+.intro__wrap {
+  padding: 320px 307px 185px 0;
+}
+
+.intro__title {
+  color: #262a62;
+  font-family: 'CoreSansGRounded', sans-serif;
+  font-size: 86px;
+  font-weight: 700;
+  line-height: 109px;
+  text-align: right;
+}
+
+.intro__steps {
+  width: 430px;
+  margin-top: 52px;
+  margin-right: 55px;
+  float: right;
+  text-align: center;
+}
+
+.intro__steps span {
+  display: inline-block;
+  width: 100%;
+  margin: 5px 0;
+  color: #252a62;
+  font-family: 'Lintel', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.dots::before,
+.dots::after {
+  content: '';
+  display: block;
+  margin: 10px auto;
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  background-color: #111c4e;
+}
+
+.about {
+  margin-top: 66px;
+  background-image: url("../img/bg-about.png");
+  background-size: cover;
+}
+
+.about__wrap {
+  padding-right: 194px;
+  padding-left: 189px;
+}
+
+.section-title {
+  color: #252a62;
+  font-family: 'CoreSansGRounded', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+}
+
+.about__text {
+  margin-top: 32px;
+  color: #898989;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+.timer {
+  margin-top: 56px;
+}
+
+.registration {
+  margin: 0 auto;
+  padding-top: 97px;
+  background-image: url("../img/bg-registration.png");
+  background-size: cover;
+}
+
+.feedback {
+  margin: 57px auto 0;
+  width: 494px;
+  text-align: center;
+}
+
+.feedback__text {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 17px 0 17px 25px;
+  background-color: #ececec;
+  border-radius: 22px;
+  text-align: left;
+}
+
+.feedback__mail {
+  display: inline-block;
+  width: 100%;
+  margin-top: 13px;
+  padding: 16px 0 17px 25px;
+  background-color: #ececec;
+  border-radius: 22px;
+  text-align: left;
+}
+
+.btn {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.btn_sent {
+  padding: 14px 25px 13px;
+  margin: 0 auto;
+  background-color: #ff73ab;
+  border-radius: 18px;
+  font-family: 'CoreSansGRounded', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn_follow {
+  padding: 16px 37px 14px;
+  background-color: transparent;
+  border: 2px solid #ff73ab;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.icon-logo {
+  background-image: url("../img/sprite.png");
+  width: 125px;
+  height: 104px;
+  background-position: 0px 0px;
+}
+
+.icon-footer-logo {
+  background-image: url("../img/sprite.png");
+  width: 105px;
+  height: 87px;
+  background-position: -135px 0px;
+}
+
+.icon-fb {
+  background-image: url("../img/sprite.png");
+  width: 9px;
+  height: 16px;
+  background-position: -226px -114px;
+}
+
+.icon-fb-color {
+  background-image: url("../img/sprite.png");
+  width: 13px;
+  height: 26px;
+  background-position: 0px -195px;
+}
+
+.icon-twitter {
+  background-image: url("../img/sprite.png");
+  width: 15px;
+  height: 13px;
+  background-position: -69px -163px;
+}
+
+.icon-twitter-color {
+  background-image: url("../img/sprite.png");
+  width: 28px;
+  height: 22px;
+  background-position: 0px -163px;
+}
+
+.icon-vk-color {
+  background-image: url("../img/sprite.png");
+  width: 33px;
+  height: 20px;
+  background-position: -183px -114px;
+}
+
+.icon-insta-logo {
+  background-image: url("../img/sprite.png");
+  width: 173px;
+  height: 39px;
+  background-position: 0px -114px;
+}
+
+.icon-google {
+  background-image: url("../img/sprite.png");
+  width: 21px;
+  height: 14px;
+  background-position: -38px -163px;
+}
+
+.icon-linkedin {
+  background-image: url("../img/sprite.png");
+  width: 15px;
+  height: 15px;
+  background-position: -23px -195px;
+}
+
+/*# sourceMappingURL=app.css.map */
