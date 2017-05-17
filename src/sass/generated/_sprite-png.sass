@@ -1,0 +1,107 @@
+$icons: (0:0)
+$icons: map-merge($icons,('fb-color': (X: 0px, Y:-195px, W: 13px, H: 26px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('fb': (X: -226px, Y:-114px, W: 9px, H: 16px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('footer-logo': (X: -135px, Y:0px, W: 105px, H: 87px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('google': (X: -38px, Y:-163px, W: 21px, H: 14px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('insta-logo': (X: 0px, Y:-114px, W: 173px, H: 39px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('linkedin': (X: -23px, Y:-195px, W: 15px, H: 15px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('logo': (X: 0px, Y:0px, W: 125px, H: 104px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('twitter-color': (X: 0px, Y:-163px, W: 28px, H: 22px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('twitter': (X: -69px, Y:-163px, W: 15px, H: 13px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('vk-color': (X: -183px, Y:-114px, W: 33px, H: 20px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-fb-color
+//  width: 13px
+//  height: 26px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -195px
+//
+//.icon-fb
+//  width: 9px
+//  height: 16px
+//  background-image: url('../img/sprite.png')
+//  background-position: -226px -114px
+//
+//.icon-footer-logo
+//  width: 105px
+//  height: 87px
+//  background-image: url('../img/sprite.png')
+//  background-position: -135px 0px
+//
+//.icon-google
+//  width: 21px
+//  height: 14px
+//  background-image: url('../img/sprite.png')
+//  background-position: -38px -163px
+//
+//.icon-insta-logo
+//  width: 173px
+//  height: 39px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -114px
+//
+//.icon-linkedin
+//  width: 15px
+//  height: 15px
+//  background-image: url('../img/sprite.png')
+//  background-position: -23px -195px
+//
+//.icon-logo
+//  width: 125px
+//  height: 104px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-twitter-color
+//  width: 28px
+//  height: 22px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -163px
+//
+//.icon-twitter
+//  width: 15px
+//  height: 13px
+//  background-image: url('../img/sprite.png')
+//  background-position: -69px -163px
+//
+//.icon-vk-color
+//  width: 33px
+//  height: 20px
+//  background-image: url('../img/sprite.png')
+//  background-position: -183px -114px
+//
