@@ -3,7 +3,7 @@
 	width: 100%
 	top: 0
 	left: 0
-	z-index: 2
+	z-index: 5
 	height: 113px
 	background-color: rgba(255, 255, 255, 0.95)
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15)
@@ -19,25 +19,29 @@
 	float: right
 	ul
 		width: 100%
-		padding-top: 58px
+		padding-top: 48px
 		padding-bottom: 45px
 		li
 			margin: 0 20px
 			vertical-align: middle
 			display: inline-block
 			a
+				padding-bottom: 11px
 				color: #7248b1
 				font-family: 'Circe', sans-serif
 				font-size: 12px
 				text-transform: uppercase
-				font-weight: 700
-			&:nth-child(2) a
 				font-weight: 400
+				transition: all .3s ease-out
+				&:hover
+					font-weight: 700
+					border-bottom: 4px solid #ff73ab
 
 .intro
 	width: 100%
 	background-image: url("../img/bg-intro.jpg")
 	background-size: cover
+	position: relative
 
 .intro__wrap
 	padding: 320px 307px 185px 0
@@ -76,10 +80,18 @@
 	border-radius: 13px
 	background-color: #111c4e
 
+.arrow-down
+	border: solid #ac9455
+	border-width: 0 2px 2px 0
+	display: inline-block
+	padding: 5px
+	transform: rotate(45deg)
+
 .about
 	margin-top: 66px
 	background-image: url("../img/bg-about.png")
 	background-size: cover
+	position: relative
 
 .about__wrap
 	padding-right: 194px
@@ -90,7 +102,7 @@
 	font-family: 'CoreSansGRounded', sans-serif
 	font-size: 40px
 	font-weight: 700
-	line-height: 40px
+	//line-height: 40px
 	text-align: center
 
 .about__text
@@ -102,22 +114,92 @@
 	line-height: 22px
 	text-align: center
 
-.timer
-	margin-top: 56px
+.countdown
+	margin-top: 42px
+	padding-bottom: 185px
 
-.timer__wrap
+.countdown__wrap
+	margin: 27px auto
+	padding: 7px
+	background-color: #0e1012
+	border-radius: 7px
+	box-shadow: 0 25px 55px rgba(0, 0, 0, 0.75)
 
+.flip-clock-wrapper
+	margin: 0
+	ul
+		margin: 0 1px
+		padding: 59px
+		line-height: 0
+		font-weight: normal
+
+.flip-clock-wrapper
+	ul
+		li
+			a
+				div
+					div
+						&.inn
+							color: #e4e4e4
+							font-family: 'Montserrat', sans-serif
+							font-size: 100px
+							line-height: 112px
+							background-color: #ff73ab
+							border-radius: 4px
+							text-shadow: none
+
+.flip-clock-wrapper
+	ul
+		li
+			a
+				div
+					&.up
+						&:after
+							top: 56px
+
+.flip-clock-dot
+	width: 4px
+	height: 4px
+	background: #e4e4e4
+	&.top
+		top: 45px
+		left: 11px
+	&.bottom
+		bottom: 29px
+		left: 11px
+
+.flip-clock-divider
+	width: 26px
+	.flip-clock-label
+		top: 11em
+		right: -150px
+		color: #262b62
+		font-family: 'CoreSansGRounded', sans-serif
+		font-size: 14px
+		font-weight: 700
+		line-height: 19px
+		text-transform: uppercase
+		letter-spacing: 3px
+	&.minutes
+		.flip-clock-label
+			right: -150px
 
 .registration
-	margin: 0 auto
-	padding-top: 97px
+	margin: 97px auto 0
+	//padding-top: 97px
+	//background-image: url("../img/bg-registration.png")
+	//background-size: cover
+
+.registration__wrap
+	margin-top: 40px
 	background-image: url("../img/bg-registration.png")
 	background-size: cover
 
 .feedback
-	margin: 57px auto 0
+	margin: 0 auto
+	padding: 57px 0 59px
 	width: 494px
-	text-align: center
+	//text-align: center
 
 .feedback__text
 	display: inline-block
@@ -136,3 +218,166 @@
 	background-color: #ececec
 	border-radius: 22px
 	text-align: left
+
+.feedback__btn
+	margin-top: 51px
+	text-align: center
+
+.social-counter
+	margin: 0 auto
+	padding: 240px 0 41px
+	width: 493px
+	display: flex
+	justify-content: space-between
+
+.social-counter__block
+
+.social-counter__icon
+	display: inline-block
+	margin-top: 3px
+	margin-right: 10px
+	vertical-align: top
+
+.social-counter__about
+	display: inline-block
+	//width: 100px
+
+.social-counter__digits
+	color: #2b2b2b
+	font-family: 'Montserrat', sans-serif
+	font-size: 33px
+	font-weight: 300
+
+.social-counter__text
+	color: #898989
+	font-family: 'OpenSans', sans-serif
+	font-size: 13px
+	font-weight: 400
+
+
+
+
+
+.instagram__follow
+	width: 280px
+	margin: 0 auto
+	padding: 42px 34px 44px
+	background-color: #252a62
+	text-align: center
+
+.instagram__title
+	color: #f9cd0a
+	font-family: 'Montserrat', sans-serif
+	font-size: 10px
+	font-weight: 400
+	text-transform: uppercase
+
+.icon-insta-logo
+	margin: 20px auto 13px
+
+.instagram__desc
+	color: #f9cd0a
+	font-family: 'OpenSans', sans-serif
+	font-size: 12px
+	font-weight: 400
+	line-height: 17px
+
+.btn_follow
+	margin-top: 29px
+	border-radius: 39px
+	letter-spacing: 1px
+
+.nav-center
+	margin: 0 auto
+	ul
+		padding: 45px 0 27px
+		text-align: center
+		li
+			margin: 0 20px
+			display: inline-block
+			a
+				color: #252a62
+				font-family: 'OpenSans', sans-serif
+				font-size: 12px
+				font-weight: 600
+				text-transform: uppercase
+				letter-spacing: 2px
+
+.footer
+	display: flex
+	justify-content: space-between
+	margin: 0 auto
+	padding: 26px 162px 57px 132px
+	border-top: 1px solid #e9e9e9
+	border-bottom: 1px solid #e9e9e9
+
+.footer-title
+	padding-top: 23px
+	padding-bottom: 28px
+	color: #2b2b2b
+	font-family: 'Montserrat', sans-serif
+	font-size: 13px
+	font-weight: 400
+	text-transform: uppercase
+	letter-spacing: 1.5px
+
+.footer__col-1
+	display: inline-block
+	width: 30%
+	margin-right: 31px
+	p
+		padding-top: 23px
+		color: #898989
+		font-family: 'OpenSans', sans-serif
+		font-size: 13px
+		font-weight: 400
+		line-height: 20px
+
+.footer__col-2
+	display: inline-block
+	margin: 0 51px 0 30px
+	vertical-align: top
+	ul
+		li
+			display: block
+			a
+				color: #898989
+				font-family: 'OpenSans', sans-serif
+				font-size: 13px
+				font-weight: 400
+
+.footer__col-3
+	display: inline-block
+	margin: 0 50px
+	vertical-align: top
+	ul
+		li
+			display: block
+			margin-bottom: 10px
+			a
+				color: #898989
+				font-family: 'OpenSans', sans-serif
+				font-size: 13px
+				font-weight: 400
+
+.footer__col-4
+	display: inline-block
+	margin-left: 73px
+	vertical-align: top
+	a
+		display: inline-block
+		margin-right: 30px
+		&:last-child
+			margin-right: 0
+
+.footer__copyright
+	margin: 0 auto
+	padding: 41px 0 37px
+	text-align: center
+	span
+		color: #bebebe
+		font-family: 'Myriad Pro', sans-serif
+		font-size: 10px
+		font-weight: 400
+		text-transform: uppercase
+		letter-spacing: 2px

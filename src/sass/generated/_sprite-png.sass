@@ -1,14 +1,15 @@
 $icons: (0:0)
-$icons: map-merge($icons,('fb-color': (X: 0px, Y:-195px, W: 13px, H: 26px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('fb': (X: -226px, Y:-114px, W: 9px, H: 16px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('footer-logo': (X: -135px, Y:0px, W: 105px, H: 87px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('google': (X: -38px, Y:-163px, W: 21px, H: 14px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('insta-logo': (X: 0px, Y:-114px, W: 173px, H: 39px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('linkedin': (X: -23px, Y:-195px, W: 15px, H: 15px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('logo': (X: 0px, Y:0px, W: 125px, H: 104px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('twitter-color': (X: 0px, Y:-163px, W: 28px, H: 22px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('twitter': (X: -69px, Y:-163px, W: 15px, H: 13px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('vk-color': (X: -183px, Y:-114px, W: 33px, H: 20px, TW: 240px, TH: 221px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('bg-scroll': (X: -135px, Y:0px, W: 245px, H: 41px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('fb-color': (X: -115px, Y:-146px, W: 13px, H: 26px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('fb': (X: -138px, Y:-146px, W: 9px, H: 16px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('footer-logo': (X: 0px, Y:-114px, W: 105px, H: 87px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('google': (X: -153px, Y:-114px, W: 21px, H: 14px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('insta-logo': (X: -135px, Y:-51px, W: 173px, H: 39px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('linkedin': (X: -361px, Y:-51px, W: 15px, H: 15px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('logo': (X: 0px, Y:0px, W: 125px, H: 104px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('twitter-color': (X: -115px, Y:-114px, W: 28px, H: 22px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('twitter': (X: -184px, Y:-114px, W: 15px, H: 13px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('vk-color': (X: -318px, Y:-51px, W: 33px, H: 20px, TW: 380px, TH: 201px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -45,41 +46,47 @@ $icons: map-merge($icons,('vk-color': (X: -183px, Y:-114px, W: 33px, H: 20px, TW
   +sprite-retina($i)  
 
 //
+//.icon-bg-scroll
+//  width: 245px
+//  height: 41px
+//  background-image: url('../img/sprite.png')
+//  background-position: -135px 0px
+//
 //.icon-fb-color
 //  width: 13px
 //  height: 26px
 //  background-image: url('../img/sprite.png')
-//  background-position: 0px -195px
+//  background-position: -115px -146px
 //
 //.icon-fb
 //  width: 9px
 //  height: 16px
 //  background-image: url('../img/sprite.png')
-//  background-position: -226px -114px
+//  background-position: -138px -146px
 //
 //.icon-footer-logo
 //  width: 105px
 //  height: 87px
 //  background-image: url('../img/sprite.png')
-//  background-position: -135px 0px
+//  background-position: 0px -114px
 //
 //.icon-google
 //  width: 21px
 //  height: 14px
 //  background-image: url('../img/sprite.png')
-//  background-position: -38px -163px
+//  background-position: -153px -114px
 //
 //.icon-insta-logo
 //  width: 173px
 //  height: 39px
 //  background-image: url('../img/sprite.png')
-//  background-position: 0px -114px
+//  background-position: -135px -51px
 //
 //.icon-linkedin
 //  width: 15px
 //  height: 15px
 //  background-image: url('../img/sprite.png')
-//  background-position: -23px -195px
+//  background-position: -361px -51px
 //
 //.icon-logo
 //  width: 125px
@@ -91,17 +98,17 @@ $icons: map-merge($icons,('vk-color': (X: -183px, Y:-114px, W: 33px, H: 20px, TW
 //  width: 28px
 //  height: 22px
 //  background-image: url('../img/sprite.png')
-//  background-position: 0px -163px
+//  background-position: -115px -114px
 //
 //.icon-twitter
 //  width: 15px
 //  height: 13px
 //  background-image: url('../img/sprite.png')
-//  background-position: -69px -163px
+//  background-position: -184px -114px
 //
 //.icon-vk-color
 //  width: 33px
 //  height: 20px
 //  background-image: url('../img/sprite.png')
-//  background-position: -183px -114px
+//  background-position: -318px -51px
 //
