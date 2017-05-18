@@ -562,7 +562,7 @@ img {
 
 .nav-menu ul {
   width: 100%;
-  padding-top: 48px;
+  padding-top: 49px;
   padding-bottom: 45px;
 }
 
@@ -626,8 +626,8 @@ img {
   line-height: 38px;
 }
 
-.dots::before,
-.dots::after {
+.plus-dots::before,
+.plus-dots::after {
   content: '';
   display: block;
   margin: 10px auto;
@@ -644,6 +644,89 @@ img {
   padding: 5px;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  cursor: default;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: 99999;
+  transition: opacity .5s;
+}
+
+.popup {
+  background-color: #fff;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  width: 870px;
+  height: 930px;
+  position: fixed;
+  visibility: hidden;
+  z-index: 999999;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: opacity .5s, top .5s;
+  border-radius: 3px;
+}
+
+.popup ul {
+  padding: 52px 85px 49px 59px;
+  overflow-y: scroll;
+  max-height: 877px;
+}
+
+.popup ul li {
+  margin-bottom: 25px;
+}
+
+.popup .close_window {
+  position: absolute;
+  padding: 5px;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: #252a62;
+  font-size: 20px;
+  font-family: 'CoreSansGRounded', sans-serif;
+}
+
+.popup__header {
+  width: 100%;
+  padding: 18px 0 14px 61px;
+  background-color: #f38bb8;
+  color: #252a62;
+  font-family: 'CoreSansGRounded', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.popup__question {
+  display: block;
+  margin-bottom: 20px;
+  color: #252a62;
+  font-family: 'CoreSansGRounded', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.popup__answer {
+  display: inline-block;
+  padding-top: 20px;
+  color: #898989;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 .about {
@@ -663,6 +746,7 @@ img {
   font-family: 'CoreSansGRounded', sans-serif;
   font-size: 40px;
   font-weight: 700;
+  line-height: 40px;
   text-align: center;
 }
 
@@ -687,6 +771,15 @@ img {
   background-color: #0e1012;
   border-radius: 7px;
   box-shadow: 0 25px 55px rgba(0, 0, 0, 0.75);
+}
+
+.countdown__message {
+  color: #ff73ab;
+  font-family: 'CoreSansGRounded', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
 }
 
 .flip-clock-wrapper {
@@ -770,7 +863,7 @@ img {
   display: inline-block;
   width: 100%;
   margin-bottom: 10px;
-  padding: 17px 0 17px 25px;
+  padding: 17px 25px 17px;
   background-color: #ececec;
   border-radius: 22px;
   text-align: left;
@@ -780,7 +873,7 @@ img {
   display: inline-block;
   width: 100%;
   margin-top: 13px;
-  padding: 16px 0 17px 25px;
+  padding: 16px 25px 17px;
   background-color: #ececec;
   border-radius: 22px;
   text-align: left;
@@ -810,6 +903,7 @@ img {
 
 .social-counter__about {
   display: inline-block;
+  width: 100px;
 }
 
 .social-counter__digits {
@@ -826,10 +920,20 @@ img {
   font-weight: 400;
 }
 
+.instagram {
+  position: relative;
+  margin-top: -25px;
+}
+
 .instagram__follow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 280px;
   margin: 0 auto;
-  padding: 42px 34px 44px;
+  padding: 42px 34px 36px;
   background-color: #252a62;
   text-align: center;
 }
@@ -855,7 +959,7 @@ img {
 }
 
 .btn_follow {
-  margin-top: 29px;
+  margin-top: 25px;
   border-radius: 39px;
   letter-spacing: 1px;
 }
@@ -985,6 +1089,59 @@ img {
   letter-spacing: 2px;
 }
 
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Open-Sans-regular/Open-Sans-regular.eot");
+  src: url("../fonts/Open-Sans-regular/Open-Sans-regular.eot?#iefix") format("embedded-opentype") local("Open Sans") local("Open-Sans-regular") url("../fonts/Open-Sans-regular/Open-Sans-regular.woff2") format("woff2") url("../fonts/Open-Sans-regular/Open-Sans-regular.woff") format("woff") url("../fonts/Open-Sans-regular/Open-Sans-regular.ttf") format("truetype") url("../fonts/Open-Sans-regular/Open-Sans-regular.svg#OpenSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Open-Sans-600/Open-Sans-600.eot");
+  src: url("../fonts/Open-Sans-600/Open-Sans-600.eot?#iefix") format("embedded-opentype") local("Open Sans Semibold") local("Open-Sans-600") url("../fonts/Open-Sans-600/Open-Sans-600.woff2") format("woff2") url("../fonts/Open-Sans-600/Open-Sans-600.woff") format("woff") url("../fonts/Open-Sans-600/Open-Sans-600.ttf") format("truetype") url("../fonts/Open-Sans-600/Open-Sans-600.svg#OpenSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Montserrat-regular/Montserrat-regular.eot");
+  src: url("../fonts/Montserrat-regular/Montserrat-regular.eot?#iefix") format("embedded-opentype") local("Montserrat Regular") local("Montserrat-regular") url("../fonts/Montserrat-regular/Montserrat-regular.woff2") format("woff2") url("../fonts/Montserrat-regular/Montserrat-regular.woff") format("woff") url("../fonts/Montserrat-regular/Montserrat-regular.ttf") format("truetype") url("../fonts/Montserrat-regular/Montserrat-regular.svg#Montserrat") format("svg");
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/Montserrat-300/Montserrat-300.eot");
+  src: url("../fonts/Montserrat-300/Montserrat-300.eot?#iefix") format("embedded-opentype") local("Montserrat Bold") local("Montserrat-300") url("../fonts/Montserrat-300/Montserrat-300.woff2") format("woff2") url("../fonts/Montserrat-300/Montserrat-300.woff") format("woff") url("../fonts/Montserrat-300/Montserrat-300.ttf") format("truetype") url("../fonts/Montserrat-300/Montserrat-300.svg#Montserrat") format("svg");
+}
+
+@font-face {
+  font-family: 'CoreSansGRounded';
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/CoreSansGRounded-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'CoreSansGRounded';
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/CoreSansGRounded-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Lintel';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/The_Northern_Block_-_Lintel.otf");
+}
+
 .btn {
   color: #ffffff;
   text-transform: uppercase;
@@ -998,6 +1155,7 @@ img {
   font-family: 'CoreSansGRounded', sans-serif;
   font-size: 12px;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .btn_follow {
