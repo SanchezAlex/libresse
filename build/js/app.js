@@ -5282,12 +5282,23 @@ $(document).ready(function () {
 
     TweenMax.fromTo('.arrow-down', 0.7, { y: "-=5" }, { y: "+=10", yoyo: true, repeat: -1 });
 
-    $('a[href^="#scroll"]').click(function () {
+    $('a[href^="#about"]').click(function () {
 
         var scrollId = $(this).attr("href");
 
         $('html, body').animate({
-            scrollTop: $(scrollId).offset().top
+            scrollTop: $(scrollId).offset().top - 113
+        }, 'slow');
+
+        return false;
+    });
+
+    $('a[href^="#registration"]').click(function () {
+
+        var scrollId = $(this).attr("href");
+
+        $('html, body').animate({
+            scrollTop: $(scrollId).offset().top - 113
         }, 'slow');
 
         return false;
@@ -5314,4 +5325,24 @@ $(document).ready(function () {
 
     clock.setTime(remaining);
     clock.start();
+
+    $('.instagram__wrap').slick({
+        infinite: true,
+        speed: 300,
+        slidesToShow: 7,
+        slideToScroll: 2,
+        centerMode: true,
+        variableWidth: true,
+        arrows: false,
+        cssEase: 'ease-in-out'
+    });
+
+    $('a.open_window').click(function (e) {
+        $('.popup, .overlay').css({ 'opacity': 1, 'visibility': 'visible' });
+        e.preventDefault();
+    });
+
+    $('.popup .close_window, .overlay').click(function () {
+        $('.popup, .overlay').css({ 'opacity': 0, 'visibility': 'hidden' });
+    });
 });
