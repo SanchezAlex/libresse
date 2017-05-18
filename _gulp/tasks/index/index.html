@@ -39,8 +39,6 @@
     .icon-tablet { width: 0.79em; height: 1em; fill: #000; }
     .icon-watch { width: 0.67em; height: 1em; fill: #000; }
     .icon-wide { width: 1.1em; height: 1em; fill: #000; }
-    .icon-wide2 { width: 1.3em; height: 1em; fill: #000; }
-
 
     section{
       width: 300px;
@@ -53,7 +51,7 @@
       top: 120px;
       left: 355px;
       bottom: 120px;
-
+      
     }
     iframe{
 		opacity: 1;
@@ -210,7 +208,7 @@
       position: absolute;
       left: 42px;
       top: 22px;
-
+      
     }
     header h1 .icon{
       font-size: 47px;
@@ -406,11 +404,6 @@
         Shape
     </title>
     <path d="M20 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 12H2V2h18v10z" fill-rule="evenodd"/>
-</symbol><symbol id="icon-wide2" viewBox="0 0 30 20">
-  <title>
-    Shape
-  </title>
-  <path d="M20 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h7l-2 3v1h8v-1l-2-3h7c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 12H2V2h18v10z" fill-rule="evenodd"/>
 </symbol></svg>
   <header class="header">
     <h1><a href="http://riverco.de">
@@ -418,10 +411,10 @@
     </a></h1>
     <%
 		date = new Date(_.now());
-		if(date.getMonth()+1<10){ month = '0' + (date.getMonth()+1);}
+		if(date.getMonth()+1<10){ month = '0' + (date.getMonth()+1);} 
 		else{ month = date.getMonth()+1; }
 
-		if(date.getDate()<10){ day = '0' + (date.getDate());}
+		if(date.getDate()<10){ day = '0' + (date.getDate());} 
 		else{ day = date.getDate(); }
     %>
     <div class="header__updated"><em><%= pages.ProjectTitle %></em> updated <%= day %>.<%= month %>.<%= date.getFullYear() %>, <%= pages.PageList.length %> pages</div>
@@ -439,17 +432,11 @@
         <svg class="icon icon-desktop"><use xlink:href="#icon-desktop"></use></svg>
         <strong>Desktop</strong>
         <span>1024px</span></button>
-      <button data-mode="wide" data-width="1600">
+      <button data-mode="wide" class="is-active" data-width="1600">
         <svg class="icon icon-wide"><use xlink:href="#icon-wide"></use></svg>
         <strong>Desktop HD</strong>
         <span>1600px</span>
       </button>
-      <button data-mode="wide" class="is-active" data-width="1920">
-        <svg class="icon icon-wide2"><use xlink:href="#icon-wide2"></use></svg>
-        <strong>Full HD</strong>
-        <span>1920px</span>
-      </button>
-
     </nav>
   </header>
   <section>
@@ -462,7 +449,7 @@
                 <a href="<%= page.file %>" class="pagelist__url">
                   <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
                 </a>
-
+                
                 <div class="pagelist__progress">
                   <% if(!page.ready) page.ready = 0; %>
                   <i style="width:<%= page.ready %>%"></i>
@@ -470,13 +457,13 @@
 
           </li>
         <% }) %>
-
+  
     </ol>
   </section>
 
   <aside class="preview" id="preview-wrapper">
-
-    <iframe id="preview"  width="1920" height="920" src="<%= pages.PageList[0].file %>"  frameborder="0"></iframe>
+    
+    <iframe id="preview"  width="1600" height="600" src="<%= pages.PageList[0].file %>"  frameborder="0"></iframe>
     <footer>
       <p>Coded with ❤️ at <a href="http://riverco.de">Coderiver</a></p>
     </footer>
@@ -524,7 +511,7 @@
         // add innerdiv
         var inner = document.createElement("div");
         inner.style.width = "100%";
-        outer.appendChild(inner);
+        outer.appendChild(inner);        
 
         var widthWithScroll = inner.offsetWidth;
 
@@ -537,7 +524,7 @@
 
     [].forEach.call(previewButtons, function(button) {
       button.addEventListener('click', function(event) {
-
+      	
       	if(window.innerWidth < 780){return;}
         event.preventDefault();
         removeActive();
@@ -547,7 +534,7 @@
       }, false);
     });
 
-
+    
     var mode = 'wide';
     [].forEach.call(navs, function(nav) {
       nav.addEventListener('click', function(event) {
@@ -560,7 +547,7 @@
 
           [].forEach.call(navs, function(nav) {
             nav.classList.remove('is-active');
-          });
+          })
           event.currentTarget.classList.add('is-active');
 
           setIframeWidth();
@@ -582,7 +569,7 @@
           iframe.style.transform = 'scale('+ 1 +')';
           iframe.style.height =  pheight + 'px';
 
-
+          
           return;
         }
         if(scaleH>1){scaleH = 1;}
@@ -611,7 +598,7 @@
 
     });
   </script>
-
+  
 </body>
 </html>
 

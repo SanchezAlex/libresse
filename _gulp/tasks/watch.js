@@ -5,7 +5,6 @@ gulp.task('watch',
     ['copy:watch',
     
     'nunjucks:watch',
-    'iconfont:watch',
     'sprite:svg:watch',
     'sprite:png:watch',
     'svgo:watch',
