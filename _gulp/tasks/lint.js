@@ -8,7 +8,7 @@ var git         = require('gulp-git');
 
 
 gulp.task('lint:js', function() {
-  // return gulp.src(['src/js/**/*.js', '!node_modules/**'])
+  // return _gulp.src(['src/js/**/*.js', '!node_modules/**'])
   //   .pipe(eslint())
   //   .pipe(eslint.format())
   //   .pipe(eslint.failAfterError());
